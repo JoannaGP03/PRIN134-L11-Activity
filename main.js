@@ -22,6 +22,12 @@ function addScore(){
   scoreBoard.innerHTML = "Score: " + score
 }
 
+//
+function resetScore(){
+ score = 0;
+ scoreBoard.innerHTML = "Score: " + 0
+}
+
 // Initial target position
 moveTarget();
 
@@ -31,3 +37,9 @@ const ball_listener = target.addEventListener("contextmenu", (e)=> {
   moveTarget();
   addScore();
 })
+
+const reset_listener = window.addEventListener('keydown', function (event) {
+  if (event.ctrlKey && event.key.toLowerCase() === 'j') {
+    event.preventDefault();
+    resetScore();
+  }})
