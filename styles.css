@@ -23,9 +23,15 @@ body {
   background-color: red;
   border-radius: 50%;
   cursor: pointer;
+
+
 }
 
 #scoreBoard {
   margin-top: 20px;
   font-size: 24px;
+}
+
+.input-area{
+  margin-bottom: 20px;
 }
